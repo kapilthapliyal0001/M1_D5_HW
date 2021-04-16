@@ -12,6 +12,9 @@
 
 //JS Basics
 
+console.log("-----------------QUE A-------------------")
+
+
 /* Ex.A
    Create a variable called "test" and assign a string to it.
 */
@@ -19,7 +22,7 @@
 let test = "Check the test";
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------QUE B-------------------")
 
 
 /* Ex.B
@@ -28,7 +31,7 @@ console.log("-----------------NEXT QUE-------------------")
 
 let sum = 10 + 20;
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("----------------- QUE C-------------------")
 
 /* Ex.C 
     Create a variable called "random" and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
@@ -38,7 +41,7 @@ let random  = Math.floor(Math.random() * 20 );
 console.log(random);
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("----------------- QUE D-------------------")
 
 /* Ex.D
     Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
@@ -48,7 +51,7 @@ let me = {name : "Kapil Prasad", surname : "Thapliyal", age : 25};
 console.log(me);
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------QUE E-------------------")
 
 /* Ex.E 
     Programmatically remove the age property from the previously create object.
@@ -58,7 +61,7 @@ delete me.age;
 console.log(me);
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("----------------- QUE F-------------------")
 
 
 /* Ex.F 
@@ -70,11 +73,12 @@ me.code_lang = code;
 console.log(me);
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("----------------- QUE  G-------------------")
 
 /* Ex.G 
    Programmatically remove the last skill from the "skills" array inside the "me" object.
 */
+console.log("The last element to be removes is: " + typeof(me.code));
 
 // delete code[-1];
 // console.log(code);
@@ -82,7 +86,7 @@ console.log("-----------------NEXT QUE-------------------")
 // console.log(me);
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("----------------- QUE 1-------------------")
 
 // JS Functions
 /* Ex.1
@@ -99,7 +103,7 @@ console.log("Que 1:");
 console.log(dice());
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------QUE 2-------------------")
 
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
@@ -112,7 +116,7 @@ const whoIsBigger = function(n1, n2) {
 console.log(whoIsBigger(42,20));
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 3-------------------")
 
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
@@ -126,7 +130,7 @@ const splitMe = function(input) {
 console.log(splitMe("This a line which will be split into many parts"));
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 4-------------------")
 
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true 
@@ -142,7 +146,7 @@ console.log(deleteOne("Kapil", false));
 
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 5-------------------")
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
@@ -157,7 +161,7 @@ const onlyLetters = function(input) {
 console.log(onlyLetters("bciec 3p vcow4  ws93w4f "));
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 6-------------------")
 
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
@@ -173,7 +177,7 @@ console.log(isThisAnEmail("kapilthapliyal0001@gmail.com")); //true
 
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 7-------------------")
 
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
@@ -188,7 +192,7 @@ const whatDayIsIt = function(){
 
 console.log("Today is " + whatDayIsIt() + " !");
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 8-------------------")
 
 
 /* Ex.8
@@ -220,7 +224,7 @@ const RollTheDices = function(num) {
 console.log(RollTheDices(5));
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 9-------------------")
 
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
@@ -238,15 +242,24 @@ const howManyDays = function(date1, date2) {      //https://www.geeksforgeeks.or
 
 console.log("The difference of days is: " + howManyDays("12/09/2018", "04/11/2013"));
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 10-------------------")
 
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
 
-let isTodayMyBirthday = function() {
-
+let isTodayMyBirthday = function() {    //https://www.techiedelight.com/get-current-date-javascript/
+    var today = new Date();
+    var now = today.toLocaleDateString('en-US');
+    if (now === "27/09/2021") {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
+
+console.log("Today my birthday!! : " + isTodayMyBirthday());
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
@@ -256,20 +269,16 @@ let isTodayMyBirthday = function() {
    Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
 */
 
-// let que11 = {name: "Kapil" , strp : "Check", passed : "Perfect!"};
+console.log("============= QUESTION 11==========")
 
+let ques = {name : "Kapil Prasad", surname : "Thapliyal", age : 25};
 
-// const deleteProp = function(new_obj, str1) {
-//     delete new_obj.str1;
-//     return new_obj;
-// }
+const deleteProp = function(new_obj,new_string) {
+    delete new_obj.new_string;
+    return new_obj
+}
 
-// deleteProp(que11, string);
-
-// delete que11.str1;
-
-// deleteProp(que11, strp)
-
+// console.log(ques, age);
 
 /* This movies array is used throughout the exercises. Please don't change it :)  */
 const movies = [
@@ -387,17 +396,21 @@ const movies = [
     },
   ];
 
+
+  console.log("============= QUESTION 12==========")
+
+
 /* Ex.12 
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
 */
 
 const olderMovie = function() {
-    let year = 0;
+    let year = 3000;
     let index = 0;
 
     for (i = 0; i< movies.length; i++) {
         let new_year = parseInt(movies[i].Year)
-        if (new_year > year) {
+        if (new_year < year) {
             year = new_year;
             index = i;
         }
@@ -406,6 +419,9 @@ const olderMovie = function() {
 }
 
 console.log(olderMovie() + " -------IS THE OLDEST MOVIE");
+
+console.log("============= QUESTION 13==========")
+
 
 /* Ex.13
     Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
@@ -418,7 +434,10 @@ const countMovies = function() {
 
 console.log("The number of movies are: --------" + countMovies());
 
-console.log("-----------------NEXT QUE-------------------")
+
+
+console.log("============= QUESTION 14==========")
+
 
 /* Ex.14
     Write a function called "onlyTheTitles" which creates an array with just the titles of the movies provided in the array at the end of the file.
@@ -435,7 +454,7 @@ let onlyTheTitles = function() {
 
 console.log(onlyTheTitles());
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 15-------------------")
 
 /* Ex.15
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
@@ -455,7 +474,7 @@ console.log(onlyInThisMillennium() + "------------- Are the movies only in this 
 
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 16-------------------")
 
 /* Ex.16 
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
@@ -471,7 +490,7 @@ const getMovieById = function(id) {
 
 console.log(getMovieById("tt4154796") + "------- --- - - -  Is the movie with the given ID");
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 17-------------------")
 
 /* Ex.17
     Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
@@ -487,7 +506,7 @@ const sumAllTheYears = function() {
 
 console.log(sumAllTheYears() + " Is the SUM of all the years movies have been provided !");
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 18-------------------")
 
 /* Ex.18
     Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
@@ -506,7 +525,7 @@ const searchByTitle = function(name) {
 
 console.count("The movies with the given NAMES ARE:  =======" + searchByTitle("Ave"));
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 19-------------------")
 
 /* Ex.19
     Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
@@ -537,7 +556,7 @@ const searchAndDivide = function(name) {
 console.count(searchAndDivide("Ave"));
 
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 20-------------------")
 
 /* Ex.20
    Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
@@ -552,6 +571,9 @@ console.log(removeIndex(4) + "The movie details from the 5th index has been remo
 
 
 // [EXTRAS] JS Advanced
+
+
+console.log("-----------------NEXT QUE 21-------------------")
 
 /* Ex.21
   Create a function called "halfTree" which receives a number as a parameter and builds an "*" half tree with the given height.
@@ -570,7 +592,7 @@ const halfTree = function(num) {
 
 halfTree(5);
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 22-------------------")
 
 /* Ex.22 
   Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
@@ -591,7 +613,7 @@ const tree = function(num) {
 
 tree(5);
 
-console.log("-----------------NEXT QUE-------------------")
+console.log("-----------------NEXT QUE 23-------------------")
 
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
