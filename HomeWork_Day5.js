@@ -16,43 +16,81 @@
    Create a variable called "test" and assign a string to it.
 */
 
+let test = "Check the test";
+
 /* Ex.B
     Create a variable called "sum" and assign to it the result of the sum between 10 and 20.
 */
+
+let sum = 10 + 20;
 
 /* Ex.C 
     Create a variable called "random" and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
 */
 
+let random  = Math.floor(Math.random() * 20 );
+console.log(random);
+
 /* Ex.D
     Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
 */
+
+let me = {name : "Kapil Prasad", surname : "Thapliyal", age : 25};
+console.log(me);
 
 /* Ex.E 
     Programmatically remove the age property from the previously create object.
 */
 
+delete me.age;
+console.log(me);
+
+
 /* Ex.F 
    Programmatically add to the object me an array called "skills", containing the programming languages you know right now.
 */
+// let code_lang = ["Java", "Javascript", "Python"];
+let code = ["Java", "Javascript", "Python"];
+me.code_lang = code;
+console.log(me);
 
+console.log("************")
 /* Ex.G 
    Programmatically remove the last skill from the "skills" array inside the "me" object.
 */
+
+// delete code[-1];
+// console.log(code);
+// me.code_lang = code;
+// console.log(me);
 
 // JS Functions
 /* Ex.1
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
 
+const dice = Math.floor(Math.random() * 6) + 1;
+console.log(dice);
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
+
+const whoIsBigger = function(n1, n2) {
+   return (n1 >= n2) ? n1 : n2 ; 
+}
+
+console.log(whoIsBigger(42,20));
 
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
+
+const splitMe = function(input) {
+    return input.split(" ");
+}
+
+console.log(splitMe("This a line which will be split into many parts"));
 
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
