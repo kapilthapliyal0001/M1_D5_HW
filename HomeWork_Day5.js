@@ -8,7 +8,7 @@
       You can use the bash terminal, the VSCode terminal or the one embedded in your Operating System if you're using macOS or Linux.
     - Complete as many exercise that you can
     - Publish them into your own GitHub account and upload repository link on Eduflow before 16.30 (Berlin Time) 
-*/
+*/      // KAPIL THAPLIYAL 
 
 //JS Basics
 
